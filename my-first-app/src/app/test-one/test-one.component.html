@@ -1,0 +1,10 @@
+<!-- <p>test-one works!</p>
+<app-test-two></app-test-two> -->
+
+<!-- <p [ngStyle]="{color: getColor()}">The number is {{randomNum}}</p> -->
+<!-- <p [ngClass]="{'green': randomNum > 0.5, 'red': randomNum <= 0.5}">The number is {{randomNum}}</p> -->
+<!-- <p [class.green]="randomNum > 0.5" [class.red]="randomNum < 0.5">The number is {{randomNum}}</p> -->
+
+<p *ngFor="let num of numberList; let i = index" [ngClass]="{'green': i%2==0, 'red': i%2!=0}">
+    {{num}}
+</p>

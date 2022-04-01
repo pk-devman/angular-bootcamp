@@ -1,0 +1,9 @@
+<!-- <app-test-one></app-test-one> -->
+<div class="app-test-one">
+  <p>This is app component!</p>
+  <!-- <app-test-one></app-test-one> -->
+  <!-- <app-parent></app-parent> -->
+  <button (click)="onChange()">Change Title</button>
+  <button (click)="onDestroy()">Destroy</button>
+  <app-lifecycle *ngIf="showLifecycle" [title]="title"></app-lifecycle>
+</div>

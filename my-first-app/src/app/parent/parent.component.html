@@ -1,0 +1,10 @@
+<p>parent works!</p>
+<app-child *ngFor="let user of users" [userId]="user.id" [userName]="user.name" (onUserDelete)="onDeleteUser($event)">
+    <span>The current user is {{user.id}}</span> <span name>{{user.name}}</span>
+</app-child>
+
+<hr>
+<label for="userName">Name</label>
+<input #addUserName type="text" id="userName">
+
+<button (click)="onAddUser()">Add User</button>

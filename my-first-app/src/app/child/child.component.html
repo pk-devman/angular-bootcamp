@@ -1,0 +1,5 @@
+<div>
+    <!-- <p>The current user is {{id}} - {{name}}</p> -->
+    <ng-content></ng-content>&nbsp; - &nbsp;<ng-content select="[name]"></ng-content>
+    <a href="#" (click)="onDelete(id)"> Delete User</a>
+</div>

@@ -1,0 +1,15 @@
+<p>test-two works!</p>
+<!-- <p [innerText]="message"></p> -->
+
+<button [disabled]="!allowAdd" (click)="onButtonClick()">Add New</button>
+<!-- <input type="text" name="" id="txtbox" (input)="onTextInput($event)"> -->
+<!-- <input type="text" name="" id="txtbox2" [value]="message"> -->
+<input type="text" name="" id="txtbox3" [(ngModel)]="message">
+<!-- <p>
+    {{message}}
+</p> -->
+<p *ngIf="showUserInput; else defaultText">The entered input is {{message}}</p>
+<!-- <p *ngIf="!showUserInput">Nothing added!</p> -->
+<ng-template #defaultText>
+    <p>Nothing added!</p>
+</ng-template>
