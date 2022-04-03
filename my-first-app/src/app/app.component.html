@@ -1,9 +1,28 @@
 <!-- <app-test-one></app-test-one> -->
 <div class="app-test-one">
-  <p>This is app component!</p>
+  <p>This is app component!  <span appHighlight>This is something important!</span></p>
+
+  <!-- <p>This is app component!  <span appBetterHighlight>This is something very important!</span></p> -->
+  <!-- <p>This is app component!  <span appBetterHighlight defaultColor="green" highlightColor="red">This is something very important!</span></p> -->
+  <p>This is app component!  <span [appBetterHighlight]="'red'">This is something very important!</span></p>
+
+
+  <div *ngFor="let number of numbers">
+    <!-- <div style="border: 1px solid; width: 50%;  margin: 10px;text-align: center; background-color: lightblue;" *ngIf="isEven(number)"> -->
+
+    <div style="border: 1px solid; width: 50%;  margin: 10px;text-align: center; background-color: lightblue;" *appUnless="isEven(number)">
+      <p>{{number}}</p>
+    </div>
+    <!-- <ng-template [ngIf]="isEven(number)">
+      <div style="border: 1px solid; width: 50%;  margin: 10px;text-align: center; background-color: lightblue;" >
+        <p>{{number}}</p>
+      </div>
+    </ng-template> -->
+  </div>
+
   <!-- <app-test-one></app-test-one> -->
   <!-- <app-parent></app-parent> -->
-  <button (click)="onChange()">Change Title</button>
+  <!-- <button (click)="onChange()">Change Title</button>
   <button (click)="onDestroy()">Destroy</button>
-  <app-lifecycle *ngIf="showLifecycle" [title]="title"></app-lifecycle>
+  <app-lifecycle *ngIf="showLifecycle" [title]="title"></app-lifecycle> -->
 </div>

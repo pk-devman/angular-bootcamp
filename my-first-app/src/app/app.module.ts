@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { HighlightDirective } from './directives/highlight.directive';
+import { BetterHighlightDirective } from './directives/better-highlight.directive';
+import { UnlessDirective } from './directives/unless.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     TestThreeComponent,
     ParentComponent,
     ChildComponent,
-    LifecycleComponent
+    LifecycleComponent,
+    HighlightDirective,
+    BetterHighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
