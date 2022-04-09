@@ -1,4 +1,5 @@
-<p>User with ID _ID_ loaded.</p>
-<p>User name is _NAME_</p>
+<p>User with ID {{user.id}} loaded.</p>
+<p>User name is {{user.name}}</p>
 
-<a routerLink="/users">Go to users</a>
+<hr>
+<a [routerLink]="['/users', 3, 'Chris']">Load Chris(3)</a>
