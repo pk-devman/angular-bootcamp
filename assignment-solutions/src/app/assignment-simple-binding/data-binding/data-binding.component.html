@@ -1,0 +1,9 @@
+<h1>Data Binding - Assignment 1</h1>
+
+<hr>
+
+<label for="userName">Username</label>
+<input type="text" id="userName" [(ngModel)]="userName">
+<p>{{userName}}</p>
+
+<button [disabled]="userName === ''" (click)="onReset()">Reset</button>
