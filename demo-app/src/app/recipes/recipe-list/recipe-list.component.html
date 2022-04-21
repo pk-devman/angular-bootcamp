@@ -1,7 +1,7 @@
 <!-- <app-recipe-item></app-recipe-item> -->
 <div class="row">
     <div class="col-xs-12">
-        <button class="btn btn-success">New Recipe</button>
+        <button class="btn btn-success" (click)="onNewRecipe()">New Recipe</button>
     </div>
 </div>
 <hr>
@@ -24,5 +24,5 @@
             <img [src]="recipe.ImagePath" alt="{{recipe.Name}}" style="max-height: 50px;" class="img-responsive">
         </span>
     </a> -->
-    <app-recipe-item *ngFor="let recipeEl of recipes" [recipe]="recipeEl"></app-recipe-item>
+    <app-recipe-item *ngFor="let recipeEl of recipes; let i = index" [recipe]="recipeEl" [index]="i"></app-recipe-item>
 </div>
